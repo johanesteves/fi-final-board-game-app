@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rank: 1
+  rating: 1.5
+  img_url: MyString
+  release_year: 1
+  weight: 1.5
+
+two:
+  name: MyString
+  rank: 1
+  rating: 1.5
+  img_url: MyString
+  release_year: 1
+  weight: 1.5
