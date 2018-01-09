@@ -35,7 +35,7 @@ export const createBoardGame = boardgame => {
 
 export const searchBoardGame = searchText => {
     return dispatch => {
-        return fetch('http://localhost:3001/api/board_games')
+        return fetch('http://localhost:3001/api/board_games/search?query=' + searchText)
             .then(response => response.json())
             .then(boardgames => dispatch(setBoardGames(boardgames)))
             .catch(error => console.log(error))
