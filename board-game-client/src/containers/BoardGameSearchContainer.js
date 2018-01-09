@@ -8,16 +8,16 @@ class BoardGameSearchContainer extends Component{
     constructor(){
         super();
         this.state = {
-            searchText: '',
-            searchResults: []
+            searchText: ''
         }
     }
 
     handleOnChange = (event) => {
         this.setState({
             searchText: event.target.value
-        })
+        });
 
+        this.props.searchBoardGame(event.target.value);
 
     };
 
@@ -28,10 +28,18 @@ class BoardGameSearchContainer extends Component{
                     <label htmlFor="searchText" className="col-md-4 control-label">Search: </label>
                     <input name="searchText" type="text" onChange={this.handleOnChange} />
                 </form>
-                <BoardGameList boardgames={this.state.searchResults}/>
+                <div><h3>Results:</h3></div>
+                <BoardGameList boardgames={this.props.searchResults}/>
             </div>
         )
     }
 }
 
-export default BoardGameSearchContainer;
+const mapStateToProps = (state) => {
+    return({
+        searchResults: state.boardgames
+    })
+};
+
+
+export default connect(mapStateToProps, { searchBoardGame })(BoardGameSearchContainer);
