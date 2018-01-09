@@ -26,7 +26,7 @@ class BoardGameForm extends Component{
         event.preventDefault();
         const boardgame = Object.assign({}, this.state);
         this.props.createBoardGame(boardgame);
-        this.setState({name: '', rating: 0, rank: 0, img_url: '', release_year: 0, weight: 0.00})
+        this.props.history.push('/boardgames');
     };
 
 
