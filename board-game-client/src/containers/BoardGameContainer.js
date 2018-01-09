@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getBoardGames } from '../actions/boardgames';
 import BoardGameList from "../components/BoardGameList";
-import BoardGameForm from './BoardGameForm'
+import { Link } from 'react-router-dom';
 // import { removeQuote, upvoteQuote, downvoteQuote } from '../actions/quotes';
 
 class BoardGameContainer extends Component{
@@ -14,7 +14,7 @@ class BoardGameContainer extends Component{
     render(){
         return(
             <div>
-                <BoardGameForm />
+                <Link to="/new">Add a game</Link>
                 <BoardGameList boardgames={this.props.boardgames}/>
             </div>
         )
