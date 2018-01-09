@@ -3,9 +3,10 @@ import React from 'react';
 const BoardGameCard = (props) => {
     return (
         <div>
-            <li>{props.name}</li>
-            <li>{props.weight}</li>
-            <li>{props.rank}</li>
+            <li>Name: {props.boardgame.name}</li>
+            <li>Weight: {props.boardgame.weight}</li>
+            <li>Rank: {props.boardgame.rank}</li>
+            <br></br>
         </div>
     )
 };
