@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import BoardGameCard from '../components/BoardGameCard';
 import { getBoardGames } from '../actions/boardgames';
+import BoardGameList from "../components/BoardGameList";
+import BoardGameForm from './BoardGameForm'
 // import { removeQuote, upvoteQuote, downvoteQuote } from '../actions/quotes';
 
-class BoardGameList extends Component{
+class BoardGameContainer extends Component{
 
     componentDidMount() {
         this.props.getBoardGames()
@@ -13,9 +14,8 @@ class BoardGameList extends Component{
     render(){
         return(
             <div>
-                {this.props.boardgames.map((boardgame) => {
-                    return (<BoardGameCard key={boardgame.id} boardgame={boardgame}/>)
-                })}
+                <BoardGameForm />
+                <BoardGameList boardgames={this.props.boardgames}/>
             </div>
         )
     }
@@ -27,4 +27,4 @@ const mapStateToProps = (state) => {
     })
 };
 
-export default connect(mapStateToProps, { getBoardGames })(BoardGameList);
+export default connect(mapStateToProps, { getBoardGames })(BoardGameContainer);

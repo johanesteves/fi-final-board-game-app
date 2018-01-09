@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './App.css'
-import BoardGames from './BoardGames'
-import BoardGameForm from "./BoardGameForm";
-import BoardGameList from './BoardGameList';
+import BoardGames from '../containers/BoardGames'
+import BoardGameForm from "../containers/BoardGameForm";
+import BoardGameContainer from '../containers/BoardGameContainer';
 
 class App extends Component{
     render(){
@@ -10,9 +10,7 @@ class App extends Component{
             <div className="App">
                 <BoardGames/>
                 <br></br>
-                <BoardGameForm/>
-                <br></br>
-                <BoardGameList/>
+                <BoardGameContainer/>
             </div>
         )
     }
