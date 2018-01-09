@@ -35,6 +35,11 @@ class Api::BoardGamesController < ApplicationController
     end
   end
 
+  def search
+    @results = BoardGame.where('name LIKE ?', "%#{params[:query]}%")
+    render json: @results
+  end
+
   private
 
   def board_game_params
