@@ -33,3 +33,14 @@ export const createBoardGame = boardgame => {
     }
 };
 
+export const searchBoardGame = searchText => {
+    return dispatch => {
+        return fetch('http://localhost:3001/api/board_games')
+            .then(response => response.json())
+            .then(boardgames => dispatch(setBoardGames(boardgames)))
+            .catch(error => console.log(error))
+    }
+};
+
+
+
