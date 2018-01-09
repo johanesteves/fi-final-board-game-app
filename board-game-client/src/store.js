@@ -1,21 +1,13 @@
 import { createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
+import boardgames from './reducers/boardgames'
 
-const boardGameReducer = (state=[], action) => {
-    switch(action.type){
-        case 'ADD_BOARD_GAME':
-            return action.boardgames;
-        default:
-            return state;
-    }
-};
 
 const reducers = combineReducers({
-    boardgames: boardGameReducer
+    boardgames
 });
 
 const middleware = [thunk];
-
 
 export default createStore(
     reducers,
