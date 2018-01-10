@@ -2,12 +2,14 @@ import React from 'react'
 
 const BoardGameSearchForm = (props) => {
     return (
-        <div>
-            <form>
-                <label htmlFor="searchText" className="col-md-4 control-label">Search: </label>
-                <input name="searchText" type="text" className="col-lg-6 form-control" onChange={props.handleOnChange} />
+        <div className="container">
+            <br />
+            <form className="form-inline">
+                <div className="form-group">
+                    <label htmlFor="searchText">Search</label>
+                    <input name="searchText" type="text" className="form-control mx-sm-3" onChange={props.handleOnChange} />
+                </div>
             </form>
-            <h3>Results:</h3>
         </div>
     )
 };

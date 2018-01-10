@@ -6,13 +6,14 @@ import BoardGameSearchForm from "../components/BoardGameSearchForm";
 
 
 class BoardGameSearchContainer extends Component{
+
     handleOnChange = (event) => {
         this.props.searchBoardGame(event.target.value);
     };
 
     render(){
         return(
-            <div>
+            <div className="container">
                 <BoardGameSearchForm handleOnChange={this.handleOnChange}/>
                 <BoardGameList boardgames={this.props.searchResults}/>
             </div>

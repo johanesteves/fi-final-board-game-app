@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { getBoardGames } from '../actions/boardgames';
 import BoardGameList from "../components/BoardGameList";
 import { Link } from 'react-router-dom';
-// import { removeQuote, upvoteQuote, downvoteQuote } from '../actions/quotes';
 
 class BoardGameContainer extends Component{
 
