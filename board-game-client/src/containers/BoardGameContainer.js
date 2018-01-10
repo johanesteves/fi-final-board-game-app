@@ -13,8 +13,11 @@ class BoardGameContainer extends Component{
 
     render(){
         return(
-            <div>
-                <Link to="/new">Add a game</Link>
+            <div className="container">
+                <div className="btn-group">
+                    <br />
+                    <Link  className="btn btn-outline-danger btn-block" to="/boardgames/new">Add a game</Link>
+                </div>
                 <BoardGameList boardgames={this.props.boardgames}/>
             </div>
         )
