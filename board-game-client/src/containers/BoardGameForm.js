@@ -35,23 +35,43 @@ class BoardGameForm extends Component{
 
         return(
             <div className="container">
+                <h2>Add Board Game</h2>
                 <form onSubmit={this.handleOnSubmit}>
-                    <label htmlFor="name" className="col-md-4 control-label">Name</label>
-                    <input name="name" type="text"  value={name} onChange={this.handleOnChange}/>
-                    <br></br>
-                    <label htmlFor="rating" className="col-md-4 control-label">Rating</label>
-                    <input name="rating" type="number" value={rating} step="0.5" max="10" min="0" onChange={this.handleOnChange}/>
-                    <br></br>
-                    <label htmlFor="img_url" className="col-md-4 control-label">Image URL</label>
-                    <input name="img_url" type="text" value={img_url} onChange={this.handleOnChange}/>
-                    <br></br>
-                    <label htmlFor="release_year" className="col-md-4 control-label">Release Year</label>
-                    <input name="release_year" type="number" value={release_year} min="1990" max="2018" step="1" onChange={this.handleOnChange}/>
-                    <br></br>
-                    <label htmlFor="weight" className="col-md-4 control-label">Weight</label>
-                    <input name="weight" type="number" value={weight} step="0.5" max="5" min="0" onChange={this.handleOnChange}/>
-                    <br></br>
-                    <input  type="submit"/>
+                    <div className="form-group row">
+                        <label htmlFor="name" className="col-sm-2 col-form-label">Name</label>
+                        <div className="col-sm-10">
+                            <input name="name" type="text" placeholder="Name" className="form-control col-md-4" value={name} onChange={this.handleOnChange}/>
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <label htmlFor="rating" className="col-sm-2 col-form-label">Rating</label>
+                        <div className="col-sm-10">
+                            <input name="rating" type="number" placeholder="0.0" className="form-control col-md-4" value={rating} step="0.5" max="10" min="0" onChange={this.handleOnChange}/>
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <label htmlFor="img_url" className="col-sm-2 col-form-label">Image URL</label>
+                        <div className="col-sm-10">
+                            <input name="img_url" type="text" placeholder="www.example.com" className="form-control col-md-4" value={img_url} onChange={this.handleOnChange}/>
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <label htmlFor="release_year" className="col-sm-2 col-form-label">Release Year</label>
+                        <div className="col-sm-10">
+                            <input name="release_year" type="number" placeholder="2017" className="form-control col-md-4" value={release_year} min="1990" max="2018" step="1" onChange={this.handleOnChange}/>
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                    <label htmlFor="weight" className="col-sm-2 col-form-label">Weight</label>
+                        <div className="col-sm-10">
+                            <input name="weight" type="number" placeholder="2.50" className="form-control col-md-4" value={weight} step="0.05" max="5" min="0" onChange={this.handleOnChange}/>
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <div className="col-sm-10">
+                            <input  type="submit" className="btn btn-primary"/>
+                        </div>
+                    </div>
                 </form>
             </div>
         )
