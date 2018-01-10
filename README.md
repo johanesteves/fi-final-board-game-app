@@ -1,19 +1,19 @@
-# Board Games 
+# Board Games Collection
 
-Welcome to the Board Games app. TBD
+Welcome to the Board Games Collection app. This app is used to keep a collection of your board games and display them in a nice manner. Also about rate your game and search
 
 
 ## Installation
 
 Once cloned, execute: 
 
-    $ cd *
+    $ cd board-game-api/
     $ bundle install
     $ rake db:migrate
 
 And then execute:
 
-    $ rails s
+    $ rake start
 
 ## Usage
 
