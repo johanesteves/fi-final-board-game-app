@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function imgError(event) {
     event.target.src = "http://vollrath.com/ClientCss/images/VollrathImages/No_Image_Available.jpg";
@@ -7,7 +8,9 @@ function imgError(event) {
 const BoardGameCard = (props) => {
     return (
         <div className="card">
-            <img className="img-card" src={props.boardgame.img_url} onError={imgError} alt={props.boardgame.name}/>
+            <Link to={`/boardgames/${props.boardgame.id}`}>
+                <img className="img-card" src={props.boardgame.img_url} onError={imgError} alt={props.boardgame.name}/>
+            </Link>
             <p className="card-text">
                 <strong>{props.boardgame.name}</strong> <br />
                 <small>
