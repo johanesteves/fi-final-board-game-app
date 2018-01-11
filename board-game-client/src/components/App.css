@@ -91,3 +91,17 @@ footer p {
   width: 100%;
   display: block;
 }
+
+.bg-1 {
+  background-color: #9e9e9e; /* Black Gray */
+  color: #fff;
+}
+
+.margin {
+  margin-bottom: 20px;
+}
+
+.container-fluid {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
